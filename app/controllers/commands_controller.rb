@@ -15,12 +15,12 @@ class CommandsController < ApplicationController
         chat_id: chat_id
       }
     }
-    
+
     HTTParty.post(url, options)
 
     head :ok
   end
-  
+
   private
 
   def url
@@ -32,7 +32,10 @@ class CommandsController < ApplicationController
   end
 
   def handlers
-    [ResponseHandlers::SodexoHandler]
+    [
+      ResponseHandlers::SodexoHandler,
+      ResponseHandlers::SmarthouseHandler
+    ]
   end
 
 end
