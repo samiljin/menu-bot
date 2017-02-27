@@ -34,7 +34,8 @@ class CommandsController < ApplicationController
   def handlers
     [
       ResponseHandlers::SodexoHandler,
-      ResponseHandlers::SmarthouseHandler
+      ResponseHandlers::SmarthouseHandler,
+      ResponseHandlers::EksotikHandler
     ]
   end
 
